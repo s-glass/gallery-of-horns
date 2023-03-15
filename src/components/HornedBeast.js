@@ -39,7 +39,7 @@ class HornedBeast extends React.Component {
     return (
       //       <article>
       //         <h3>{this.props.title}</h3>
-      //         <p>💜 {this.state.votes}</p>
+      //         <p> {this.state.votes}</p>
       //         <p onClick={this.handleVote}>Favorite Me!</p>
       //         <img src={this.props.image_url} alt={this.props.title} />
       //         <Button onClick={this.needsFood} variant="info">I'm hungry</Button>
