@@ -50,7 +50,7 @@ class HornedBeast extends React.Component {
         <Card.Body>
           <Card.Title onClick={this.props.addHearts}>{this.props.title}</Card.Title>
           <Card.Text>
-            <span>{this.state.votes}💜</span>
+            <span role="image" alt="purple heart emoji">{this.state.votes}💜</span>
             <p onClick={this.handleVote}>Favorite Me!</p>
           </Card.Text>
           <Button onClick={this.needsFood} variant="info">I'm hungry</Button>
