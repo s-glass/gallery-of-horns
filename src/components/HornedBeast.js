@@ -2,6 +2,7 @@ import React from 'react';
 import '../HornedBeast.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+// import Header from './Header'
 
 class HornedBeast extends React.Component {
   constructor(props) {
@@ -34,29 +35,22 @@ class HornedBeast extends React.Component {
       feedMe: false
     })
   }
+  // Handler to call the open modal that requires an argument
+  handleImgClick = () => {
+    this.props.handleOpenModal(this.props.description)
+  }
 
   render() {
+
+
     return (
-      //       <article>
-      //         <h3>{this.props.title}</h3>
-      //         <p> {this.state.votes}</p>
-      //         <p onClick={this.handleVote}>Favorite Me!</p>
-      //         <img src={this.props.image_url} alt={this.props.title} />
-      //         <Button onClick={this.needsFood} variant="info">I'm hungry</Button>
-      //         <Button onClick={this.wasFed} variant="warning">I've been fed</Button>
-
-      //         <div>{this.state.feedMe ? 'I am hungry!' : ''}</div>
-      //       </article>
-      //     )
-      //   }
-      // }
-
+      <>
       <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={this.props.image_url} alt={this.props.title} />
+        <Card.Img variant="top" onClick={this.handleImgClick} src={this.props.image_url} alt={this.props.description} />
         <Card.Body>
-          <Card.Title>{this.props.title}</Card.Title>
+          <Card.Title onClick={this.props.addHearts}>{this.props.title}</Card.Title>
           <Card.Text>
-            <h5>{this.state.votes}</h5>
+            <span>{this.state.votes}💜</span>
             <p onClick={this.handleVote}>Favorite Me!</p>
           </Card.Text>
           <Button onClick={this.needsFood} variant="info">I'm hungry</Button>
@@ -64,6 +58,8 @@ class HornedBeast extends React.Component {
           <div>{this.state.feedMe ? 'I am hungry!' : ''}</div>
         </Card.Body>
       </Card>
+
+      </>
     );
   }
 }
