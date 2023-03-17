@@ -37,7 +37,7 @@ class HornedBeast extends React.Component {
   }
   // Handler to call the open modal that requires an argument
   handleImgClick = () => {
-    this.props.handleOpenModal(this.props.description)
+    this.props.handleOpenModal(this.props.image_url, this.props.description)
   }
 
   render() {
@@ -48,9 +48,8 @@ class HornedBeast extends React.Component {
       <Card style={{ width: '18rem' }}>
         <Card.Img variant="top" onClick={this.handleImgClick} src={this.props.image_url} alt={this.props.description} />
         <Card.Body>
-          <Card.Title onClick={this.props.addHearts}>{this.props.title}</Card.Title>
+          <Card.Title>{this.props.title}</Card.Title>
           <Card.Text>
-            {/* <span role="image" alt="purple heart emoji"></span> */}
             <p onClick={this.handleVote}>Favorite Me! {this.state.votes}💜</p>
           </Card.Text>
           <Button onClick={this.needsFood} variant="info">I'm hungry</Button>
