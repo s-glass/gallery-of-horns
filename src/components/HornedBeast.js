@@ -1,6 +1,6 @@
 import React from 'react';
 import '../HornedBeast.css';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 // import Header from './Header'
 
@@ -24,25 +24,23 @@ class HornedBeast extends React.Component {
   // Methods to update state of feedMe // ternary - wtf?
   // what? true : false
 
-  needsFood = () => {
-    this.setState({
-      feedMe: true
-    })
-  }
+  // needsFood = () => {
+  //   this.setState({
+  //     feedMe: true
+  //   })
+  // }
 
-  wasFed = () => {
-    this.setState({
-      feedMe: false
-    })
-  }
+  // wasFed = () => {
+  //   this.setState({
+  //     feedMe: false
+  //   })
+  // }
   // Handler to call the open modal that requires an argument
   handleImgClick = () => {
     this.props.handleOpenModal(this.props.image_url, this.props.description)
   }
 
   render() {
-
-
     return (
       <>
       <Card style={{ width: '18rem' }}>
@@ -52,8 +50,8 @@ class HornedBeast extends React.Component {
           <Card.Text>
             <p onClick={this.handleVote}>Favorite Me! {this.state.votes}💜</p>
           </Card.Text>
-          <Button onClick={this.needsFood} variant="info">I'm hungry</Button>
-          <Button onClick={this.wasFed} variant="warning">I've been fed</Button>
+          {/* <Button onClick={this.needsFood} variant="info">I'm hungry</Button>
+          <Button onClick={this.wasFed} variant="warning">I've been fed</Button> */}
           <div>{this.state.feedMe ? 'I am hungry!' : ''}</div>
         </Card.Body>
       </Card>

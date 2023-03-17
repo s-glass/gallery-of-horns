@@ -44,7 +44,7 @@ Actual time needed to complete: 25 mins
 
 -------------------------------
 
-Number and name of feature: #1 Display a Modal
+Number and name of feature: #4 Display a Modal
 
 Estimate of time needed to complete: 120 minutes
 
@@ -56,12 +56,12 @@ Actual time needed to complete: approximately 2 hours
 
 -------------------------------
 
-Number and name of feature: 
+Number and name of feature: #5 
 
-Estimate of time needed to complete: 45 mins
+Estimate of time needed to complete: 1-1.5 hours
 
-Start time: 525pm
+Start time: 600pm
 
-Finish time: 550pm
+Finish time: 718pm
 
-Actual time needed to complete: 25 mins
+Actual time needed to complete: 78 mins / 1 hour, 18 mins
