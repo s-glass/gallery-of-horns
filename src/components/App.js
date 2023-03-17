@@ -6,49 +6,41 @@ import Header from './Header';
 import Main from './Main';
 // import HornedBeast from './HornedBeast';
 import Footer from './Footer';
-import Modal from 'react-bootstrap/Modal';
-// import data from './data/data.json'
+import data from '../data/data.json'
+import SelectedBeast from './SelectedBeast'
 
 // 2 - CREATE THE CLASS - will always have a render method
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      hearts: '',
       showModal: false,
       selectedHornedBeast: ''
     }
   }
-  addHearts = () => {
-    this.setState({
-      hearts: this.state.hearts + '💜'
-    })
-  }
 
   // Modal method to close the modal
-  handleCloseModal = () =>{
+  handleCloseModal = () => {
     this.setState({
       showModal: false
     })
   }
 
-  handleOpenModal = (description) => {
+  handleOpenModal = (image_url, description) => {
     this.setState({
       showModal: true,
-      selectedHornedBeast: description
-  })
+      selectedHornedBeast: image_url,
+      selectedBeastDsc: description
+    })
   }
 
 
-  render(){
+  render() {
     return (
       <>
-        <Header hearts={this.state.hearts} />
-        <Main addHearts={this.addHearts} handleOpenModal={this.handleOpenModal} />
-        <Modal show={this.state.showModal} onHide={this.handleCloseModal}>
-          <Modal.Header closeButton>{this.state.selectedHornedBeast}</Modal.Header>
-        </Modal>
-        {/* <HornedBeast /> */}
+        <Header />
+        <Main data={data} handleOpenModal={this.handleOpenModal} />
+        <SelectedBeast showModal={this.state.showModal} handleCloseModal= {this.handleCloseModal} selectedHornedBeast={this.state.selectedHornedBeast} selectedBeastDsc={this.state.selectedBeastDsc}/>
         <Footer />
       </>
     )
