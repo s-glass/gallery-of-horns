@@ -44,14 +44,24 @@ Actual time needed to complete: 25 mins
 
 -------------------------------
 
-Number and name of feature: 
+Number and name of feature: #1 Display a Modal
 
-Estimate of time needed to complete: 
+Estimate of time needed to complete: 120 minutes
 
-Start time: 
+Start time: I didn't keep the start and finish times on this one.
 
-Finish time: 
+Finish time: I didn't keep the start and finish times on this one.
 
-Actual time needed to complete:
+Actual time needed to complete: approximately 2 hours 
 
 -------------------------------
+
+Number and name of feature: 
+
+Estimate of time needed to complete: 45 mins
+
+Start time: 525pm
+
+Finish time: 550pm
+
+Actual time needed to complete: 25 mins
